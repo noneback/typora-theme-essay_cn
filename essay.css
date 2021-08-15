@@ -118,16 +118,20 @@ h4 {
 /* 表格自动编号 */
 #write figure:after{
 	counter-increment: tableHead;
-	content: "表" counter(tableHead) " ";
+	content: "Table " counter(tableHead) " ";
 	text-align:center;
+    font-weight:bold; 
+    font-size:12pt;
 	width:100%;
 	display:inline-block;
 }
 /* 图片自动编号，导出PDF时暂时无法显示 */
 #write .md-image:after{
 	counter-increment: imgHead;
-	content: "图" counter(imgHead) " " !important;
+	content: "Figure " counter(imgHead) " " !important;
 	text-align:center;
+    font-weight:bold;
+    font-size:12pt;
 	width:100%;
 	display:inline-block;
 }
